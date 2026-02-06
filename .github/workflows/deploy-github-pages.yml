@@ -1,0 +1,201 @@
+env:
+  # ###########################################################################
+  # FEATURES:
+  # ###########################################################################
+  #
+  # For offline support: (set to 'true' / 'false')
+  NG_USE_SERVICE_WORKER: 'true'
+  #
+  # Use the "Offers" content-type: (set to 'true' / 'false')
+  NG_USE_OFFERS: 'true'
+  #
+  # Use the "Q&A" content-type: (set to 'true' / 'false')
+  NG_USE_Q_AND_AS: 'true'
+  #
+  # When using "Q&A"s, you can enable search: (set to 'true' / 'false')
+  NG_USE_Q_AND_A_SEARCH: 'true'
+  #
+  # Enable Feedback-prompt on Sub-Category and Offer pages (set to 'true' / 'false')
+  NG_USE_FEEDBACK_PROMPT: 'false'
+  #
+  # Use the language-switcher to switch between Regions (set to 'true' / 'false')
+  NG_USE_REGION_PER_LOCALE: 'false'
+  #
+  # Default language
+  NG_LOCALE_LANGUAGE: 'en'
+  # Default language direction (Possible values: 'ltr' or 'rtl')
+  NG_LOCALE_DIR: 'ltr'
+  # Available language options (Comma-separated list like: '<language-code>:<language-name>,ar:العربية,en:English,*:Other...')
+  # To disable the language-switcher on the main-page, or when using `NG_USE_REGION_PER_LOCALE=true`, set this to: ''
+  NG_LOCALE_ALTERNATIVES: 'ar:العربية, en:English, es:Español, fr:Français, *:Other...'
+  # An (optional) explanation below the list of available language options (i.e "* Using Google Translate")
+  NG_LOCALE_ALTERNATIVES_EXPLANATION: '* Translations via Google Translate'
+  #
+  #
+  # For demo-purpose only: A highly visible label to show instance name/version
+  ENV_NAME: ''
+  #
+  # ###########################################################################
+  # TEXT CONTENT:
+  # ###########################################################################
+  #
+  # A (short) name, visible in the top (navigation-)bar and in the browser's tab/window-title (and search-engine results)
+  TXT_APP_NAME: 'FAQ Morocco'
+  # An absolute/data-URL to an image, visible in the top (navigation-)bar
+  TXT_APP_LOGO_URL: 'data:image/jpeg;base64,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'
+  # The first heading, (only) visible on the main-page
+  TXT_MAIN_PAGE_HEADER: 'FAQ Morocco Earthquake Response'
+  # The (optional) introduction text, (only) visible on the main-page.
+  # Can be multiple-lines of Markdown syntax or contain some HTML. Newlines need to be specified with `\n` or `<br />`.
+  TXT_MAIN_PAGE_INTRO: >-
+    \This Helpful Information web-App (HIA) is made to give you an overview of all Frequently Asked Questions (FAQ) for the Morocco Earthquake Response
+    \n
+  #
+  # An (optional) notice on the top of the screen, can be overwritten on sub-pages per-region by each region's sheet.
+  TXT_MAIN_PAGE_NOTICE: ''
+  #
+  # An (optional) "About"-page
+  # Can be multiple-lines of Markdown syntax or contain some HTML. Newlines need to be specified with `\n` or `<br />`.
+  TXT_PAGE_ABOUT: >-
+    \n
+  #
+  # An (optional) "Privacy"-page
+  # Can be multiple-lines of Markdown syntax or contain some HTML. Newlines need to be specified with `\n` or `<br />`.
+  TXT_PAGE_PRIVACY: >-
+    \n
+  #
+  # An (optional) footer at the bottom of the screen, can be overwritten on sub-pages per-region by each region's sheet.
+  TXT_MAIN_FOOTER: >-
+    **Helpful Information**  \n
+    \n
+  #
+  # Contents of the 'error-page'
+  #
+  TXT_ERROR_HEADER: 'Data Unavailable'
+  # This Sentence will be followd by a link to the "Contact-URL" set below
+  TXT_ERROR_MESSAGE: 'Reach out to us at: '
+  # Provide a URL that has contact-information on it, or a `mailto:contact@example.org`-URL
+  TXT_ERROR_CONTACT_URL: 'https://github.com/${{ github.repository }}'
+  # Call to action on a link that will reload the current page
+  TXT_ERROR_RETRY: 'Try again?'
+  #
+  # ###########################################################################
+  # REGIONS/SHEETS:
+  # ###########################################################################
+  #
+  # When defining multiple regions/sheets, the order in the following 3 variables need to match.
+  # The last option in each list should NOT contain a comma (,) at the end.
+  #
+  # So in this example:
+  #  <REGION>  =  <REGION__LABEL>     =  <REGION__SHEET_ID>
+  #  "test"    =  "Test/Development"  =  "10SIJdAQSd6loqCyzwK409QS_01Fgp8P4aqoDO8iBvhY"
+  #
+  # The URL-part(s) to identify the region
+  REGIONS: >-
+    taroudant,
+    chichaoua,
+    marrakech el haouz,
+  # The readable label(s) on the link to the region-page
+  REGIONS_LABELS: >-
+    Taroudant,
+    Chichaoua,
+    Marrakech El Haouz,
+  # The ID of the Google Sheet(s) that contains the content for the region
+  REGIONS_SHEET_IDS: >-
+    11UxiACVXPmzViZhY9X5BSos81gPqDDYA4M6UQxc2J-o,
+    1H2mJ2sKk0gXdtWxKwLkK9hlbPgmGFdcjeaD8GLPa2j0,
+    1NXhw5zCB8_qnkyGf9m1FS5FdeSR27Fb8uHmBhmR0WGc,
+
+# #############################################################################
+#
+# See: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+#
+# #############################################################################
+
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['main']
+    paths-ignore:
+      - '*.md'
+
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    # Skip initial run directly after template instantiation
+    if: github.event.created != true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Verify ENV configuration
+        if: env.REGIONS_SHEET_IDS == 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        run: |
+          echo "⚠️ Set the appropriate Google Spreadsheet ID in \`REGIONS_SHEET_IDS\`, instead of the default/placeholder-value: \`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\`" >> $GITHUB_STEP_SUMMARY
+          echo "Edit [\`.github/workflows/deploy-github-pages.yml\`](../../edit/main/.github/workflows/deploy-github-pages.yml) to fix." >> $GITHUB_STEP_SUMMARY
+          echo "::error file=.github/workflows/deploy-github-pages.yml::Please change the ENV configuration to real-world values" && exit 1
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+          cache-dependency-path: 'package.json'
+          cache: 'npm'
+
+      - name: Install local
+        run: 'npm install --no-save'
+
+      - name: Set-up helpful-information
+        run: 'mv node_modules/helpful-information ./'
+
+      - name: Install helpful-information
+        working-directory: 'helpful-information'
+        run: 'npm ci --no-fund --no-audit'
+        env:
+          HUSKY: 0
+
+      - name: Build
+        working-directory: 'helpful-information'
+        # NOTE: When the instance will be run on a custom (sub-)domain, remove the `--base-href`-flag+value.
+        run: 'npm run build:production -- --output-path=../www'
+        env:
+          # See all variables: https://github.com/rodekruis/helpful-information/blob/main/.env.example
+          NG_PRODUCTION: 'true'
+          GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
+          GOOGLE_SHEETS_API_URL: 'https://sheets.googleapis.com/v4/spreadsheets'
+
+      - name: Add generic files
+        run: 'cp -r ./public/. www/'
+
+      - name: Add 404.html
+        run: 'cp www/index.html www/404.html'
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'www'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
