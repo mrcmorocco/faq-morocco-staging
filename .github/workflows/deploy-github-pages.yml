@@ -31,7 +31,7 @@ env:
   # An (optional) explanation below the list of available language options (i.e "* Using Google Translate")
   NG_LOCALE_ALTERNATIVES_EXPLANATION: '* Translations via Google Translate'
   #
-  #
+  
   # For demo-purpose only: A highly visible label to show instance name/version
   ENV_NAME: ''
   #
