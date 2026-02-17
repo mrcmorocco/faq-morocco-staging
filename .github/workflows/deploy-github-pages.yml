@@ -177,9 +177,10 @@ jobs:
         env:
           # See all variables: https://github.com/rodekruis/helpful-information/blob/main/.env.example
           NG_PRODUCTION: 'true'
-          GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
-          GOOGLE_SHEETS_API_URL: 'https://sheets.googleapis.com/v4/spreadsheets'
-
+          # GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
+          # GOOGLE_SHEETS_API_URL: 'https://sheets.googleapis.com/v4/spreadsheets'
+          google_sheets_api_key: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
+          google_sheets_api_url: 'https://sheets.googleapis.com/v4/spreadsheets'
       - name: Add generic files
         run: 'cp -r ./public/. www/'
 
