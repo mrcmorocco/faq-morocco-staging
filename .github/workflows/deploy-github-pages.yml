@@ -170,6 +170,13 @@ jobs:
         env:
           HUSKY: 0
 
+      - name: Sanitize Google Sheets API key
+        shell: bash
+        run: |
+          CLEAN_KEY="$(printf '%s' '${{ secrets.GOOGLE_SHEETS_API_KEY }}' | tr -d '\r\n' | xargs)"
+          echo "GOOGLE_SHEETS_API_KEY=$CLEAN_KEY" >> "$GITHUB_ENV"
+          echo "GOOGLE_SHEETS_API_URL=https://sheets.googleapis.com/v4/spreadsheets" >> "$GITHUB_ENV"
+
       - name: Build
         working-directory: 'helpful-information'
         # NOTE: When the instance will be run on a custom (sub-)domain, remove the `--base-href`-flag+value.
@@ -177,10 +184,8 @@ jobs:
         env:
           # See all variables: https://github.com/rodekruis/helpful-information/blob/main/.env.example
           NG_PRODUCTION: 'true'
-          # GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
-          # GOOGLE_SHEETS_API_URL: 'https://sheets.googleapis.com/v4/spreadsheets'
-          google_sheets_api_key: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
-          google_sheets_api_url: 'https://sheets.googleapis.com/v4/spreadsheets'
+          GOOGLE_SHEETS_API_KEY: ${{ env.GOOGLE_SHEETS_API_KEY }}
+          GOOGLE_SHEETS_API_URL: ${{ env.GOOGLE_SHEETS_API_URL }}
       - name: Add generic files
         run: 'cp -r ./public/. www/'
 
